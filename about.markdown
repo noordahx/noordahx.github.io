@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-Hi everyone!
+
 
 Hi everyone! My name is Nurda, I am cs student at CityU Hong Kong. Currently, I am studying my exchange semester @UBC campus. I am interested in a lot of things and will share my projects and ideas here. Hope, you like it!
 
