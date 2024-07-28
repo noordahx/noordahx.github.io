@@ -1,8 +1,10 @@
 ---
-title: Books that got deleted by Kindle
+title: Book List 2024 
 ---
 
+After my kindle decided to self-destroy all of my notes and books, I decided to keep the m here (maybe with notes included).
 List (2024):
+
 * Inside the black box - Rishi K. Narang
 * Deep Work - Cal Newport
 * Sapiens - Yuval Noah Harari
@@ -16,6 +18,7 @@ List (2024):
 * Ultra-Processed People - Chris van Tulleken
 
 In progress 2024:
+
 * Masterminds of Programming - Federico Biancuzzi, Shane Warden
 * How to Be a Stoic - Massimo Pigliucci
 * Hacker's Delight - Henry S. Warren Jr.

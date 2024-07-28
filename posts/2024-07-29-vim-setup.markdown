@@ -1,0 +1,97 @@
+---
+title: My Vim setup
+---
+
+I recently switched to nvim as my primary text editor.
+
+```vim
+:set number
+:set tabstop=2
+:set relativenumber
+:set autoindent
+:set shiftwidth=2
+:set smarttab
+:set softtabstop=2
+:set mouse=a
+:set encoding=utf-8
+:set updatetime=300
+:set signcolumn=no
+syntax on
+filetype plugin indent on
+
+call plug#begin()
+" Plugins
+Plug 'preservim/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+call plug#end()
+" Configure CTRLP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:cotrlp_working_path_mode = 'ra'
+
+" Configure NerdTree
+" open NerdTree automatically
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * NERDTree
+
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+
+let g:NERDTreeDirArrowExpandable='+'
+let g:NERDTreeDirArrowCollapsible='~'
+let g:NERDTreeGitStatusWithFlags = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:NERDTreeGitStatusNodeColorization = 1
+" let g:NERDTreeColorMapCustom = {
+	"\ "Staged"    : "#0ee375",  
+	"\ "Modified"  : "#d9bf91",  
+	"\ "Renamed"   : "#51C9FC",  
+	"\ "Untracked" : "#FCE77C",  
+	"\ "Unmerged"  : "#FC51E6",  
+	"\ "Dirty"     : "#FFBD61",  
+	"\ "Clean"     : "#87939A",   
+	"\ "Ignored"   : "#808080"   
+	"\ }
+
+" Configure COC
+let g:coc_disable_startup_warning = 1
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
+
+nnoremap <silent <space> d :<C-u>CocList diagnostics<cr>
+
+nmap <leader>do <Plug>(coc-codeaction)
+
+nmap <leader>rn <Plug>(coc-rename)
+
+let g:coc_global_extensions = [
+		\ 'coc-tsserver',
+		\ 'coc-json',
+		\ 'coc-css',
+		\ 'coc-eslint',
+		\ 'coc-prettier',
+		\ 'coc-clangd'
+		\ ]
+autocmd FileType c,cpp,h nnoremap <buffer><space>l :CocCommand clangd.switchSourceHeader<CR>
+
+" Configure Airline
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_statusline_ontop = 0
+let g:airline_theme = 'ayu_light'
+let g:airline#extensions#tabline#formatter = 'default'
+
+nnoremap <M-Right> :bn<CR>
+nnoremap <M-Left> :bp<CR>
+nnoremap <c-x> :bp \| :bd #<CR>
+
+```
