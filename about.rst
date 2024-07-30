@@ -6,7 +6,7 @@ title: About
 
 我是城市大学留学生。
 
-我喜欢Compilers, Functional Programming (Scala, Haskell), and algorithms。
+我喜欢Compilers, Functional Programming and algorithms。
 
 我说英文，汉语， 俄罗斯文 和 哈萨克语。
 
