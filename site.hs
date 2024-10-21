@@ -11,7 +11,6 @@ root = "https://noordahx.github.io"
 config :: Configuration
 config = defaultConfiguration
     { destinationDirectory = "docs"
-    , previewPort          = 5000
     }
 
 main :: IO ()
